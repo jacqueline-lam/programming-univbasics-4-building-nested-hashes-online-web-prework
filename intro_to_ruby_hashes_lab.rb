@@ -38,25 +38,3 @@ def monopoly_with_fourth_tier
   # complexity.
 end
 
-
-######
- 
-  describe "the monopoly_with_fourth_tier method builds on the hash returned by monopoly_with_third_tier, but updates the Hash so that each of the :railroads :names keys points to a Hash with a key \"mortgage_value\" that is a String with a $-sign and an Integer after it" do
-
-    it "reports reading_railroad's mortgage value as $100" do
-      expect(monopoly_with_fourth_tier[:railroads][:names][:reading_railroad]["mortgage_value"]).to eq("$100")
-    end
-
-    it "sets the 1st key of the :pennsylvania_railroad hash to a string, 'mortgage_value', whose value is also a string, '$200'" do
-      expect(monopoly_with_fourth_tier[:railroads][:names][:pennsylvania_railroad]["mortgage_value"]).to eq("$200")
-    end
-
-    it "sets the 1st key of the :b_and_o_railroad hash to a string, 'mortgage_value', whose value is also a string, '$400'" do
-      expect(monopoly_with_fourth_tier[:railroads][:names][:b_and_o_railroad]["mortgage_value"]).to eq("$400")
-    end
-
-    it "sets the 1st key of the :shortline_railroad hash to a string, 'mortgage_value', whose value is also a string, '$800'" do
-      expect(monopoly_with_fourth_tier[:railroads][:names][:shortline_railroad]["mortgage_value"]).to eq("$800")
-    end
-  end
-end
